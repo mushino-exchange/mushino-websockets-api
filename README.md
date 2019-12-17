@@ -189,7 +189,6 @@ The **category** can be any of the following:
 * **trigger_failed** (Your stop order failed)
 * **deposit_added** (Your deposit was detected)
 * **deposit_completed** (Your deposit was credited)
-* **withdrawal_added** (Your withdrawal was accepted)
 * **withdrawal_completed** (Your withdrawal was completed)
 * **position_updated** (Your position was updated)
 * **position_closed** (Your position was closed)
@@ -219,7 +218,6 @@ Once you are authenticated, you will automatically receive updates about the fol
 * trigger_failed
 * deposit_added
 * deposit_completed
-* withdrawal_added
 * withdrawal_completed
 * position_updated
 * position_closed
@@ -457,7 +455,6 @@ function handle_message(message) {
     case 'trigger_cancelled': return console.info("Your stop was cancelled: ", message.result);
     case 'trigger_failed': return console.info("Your stop failed: ", message.result);
     case 'deposit_added': return console.info("Your deposit was detected: ", message.result);
-    case 'withdrawal_added': return console.info("Your withdrawal was accepted: ", message.result);
     case 'deposit_completed': return console.info("Your deposit was credited: ", message.result);
     case 'withdrawal_completed': return console.info("Your withdrawal was completed: ", message.result);
     case 'ok': return true;
@@ -486,7 +483,6 @@ function handle_message(message) {
 * **trigger_failed** (Your stop order failed) (Requires authentication)
 * **deposit_added** (Your deposit was detected) (Requires authentication)
 * **deposit_completed** (Your deposit was credited) (Requires authentication)
-* **withdrawal_added** (Your withdrawal was accepted) (Requires authentication)
 * **withdrawal_completed** (Your withdrawal was completed) (Requires authentication)
 * **position_updated** (Your position was updated) (Requires authentication)
 * **position_closed** (Your position was closed) (Requires authentication)
