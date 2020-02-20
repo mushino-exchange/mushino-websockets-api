@@ -4,10 +4,6 @@ To use the API, you may connect your program to the following endpoint:
 
 **wss://wss.mushino.com**
 
-Or, if you just want to play around on the testnet:
-
-**wss://wss.testnet.mushino.com**
-
 Once connected, you can subscribe to a specific trading pair (such as the BTC perpetual future).
 
 Then you'll receive all updates about that trading pair automatically.
@@ -29,7 +25,7 @@ import json
 API_KEY = "YOUR_API_KEY" # Leave this out if you just want public data
 
 async def hello():
-    uri = "wss://wss.testnet.mushino.com" # Connect to testnet
+    uri = "wss://wss.mushino.com" # Connect to testnet
     async with websockets.connect(uri) as websocket:
 
         # Let's receive updates about the BTC/USD perpetual future!
@@ -359,7 +355,7 @@ Unsubscribing from everything related to the BTC/USD perpetual future:
 
 ```javascript
 const ws = require('ws');
-const socket = new ws('wss://wss.testnet.mushino.com'); // Connect to testnet
+const socket = new ws('wss://wss.mushino.com'); 
 const API_KEY = 'YOUR_API_KEY';
 
 socket.on('open', () => {
@@ -397,7 +393,7 @@ import json
 API_KEY = "YOUR_API_KEY" # Leave this out if you just want public data
 
 async def hello():
-    uri = "wss://wss.testnet.mushino.com" # Connect to testnet
+    uri = "wss://wss.mushino.com"
     async with websockets.connect(uri) as websocket:
 
         # Let's receive updates about the BTC/USD perpetual future!
