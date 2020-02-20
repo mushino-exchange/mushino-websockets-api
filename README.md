@@ -25,7 +25,7 @@ import json
 API_KEY = "YOUR_API_KEY" # Leave this out if you just want public data
 
 async def hello():
-    uri = "wss://wss.mushino.com" # Connect to testnet
+    uri = "wss://wss.mushino.com"
     async with websockets.connect(uri) as websocket:
 
         # Let's receive updates about the BTC/USD perpetual future!
@@ -283,7 +283,7 @@ For the BTC/USD perpetual future, that is BTC_USD_PERP.
 
 For the BTC/ALTS perpetual future, that is BTC_ALTS_PERP.
 
-The programmatic name can be retrieved from the contract specification on Mushino.com, or through https://api.testnet.mushino.com/pairs.
+The programmatic name can be retrieved from the contract specification on Mushino.com, or through https://api.mushino.com/pairs.
 
 Examples:
 
